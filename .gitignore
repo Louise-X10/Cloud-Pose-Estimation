@@ -162,4 +162,5 @@ cython_debug/
 # Sleap Demo
 *.mp4
 sleap-demo/*
+appstream-demo/*
 .idea/*
