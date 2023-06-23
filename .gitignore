@@ -159,8 +159,11 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Sleap Demo
+# Demo files
+.idea/*
 *.mp4
 sleap-demo/*
 appstream-demo/*
-.idea/*
+terraform-demo/*
+
+
