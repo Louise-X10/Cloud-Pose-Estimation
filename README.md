@@ -95,6 +95,8 @@ This method only works for setting up the jupyter environment. This method may n
 
 ```commandline
 conda env create -f jupyter_environment.yml
+conda activate jupyter
+conda install nb_conda_kernel
 ```
 
 3. Install via command line
@@ -102,8 +104,8 @@ conda env create -f jupyter_environment.yml
 If none of the above methods work, try installing manually by running the commands below.
 
 ```commandline
-conda create -y -n jupyter jupyter=1.0.0
-conda create -y -n sleap -c sleap -c nvidia -c conda-forge sleap=1.3.0
+conda create -y -n jupyter jupyter=1.0.0 nb_conda_kernel
+conda create -y -n sleap -c sleap -c nvidia -c conda-forge sleap=1.3.0 ipykernel
 ```
 
 ### Environment Activation
@@ -115,7 +117,7 @@ conda activate jupyter
 jupyter notebook
 ```
 
-To follow through the SLEAP demo, use the sleap environment and open the SLEAP GUI as follows.
+To follow through the SLEAP demo, you can either create a jupyter notebook using the `Python[conda env: sleap]` kernel, or activate the sleap environment in the terminal and open the SLEAP GUI as follows.
 
 ```commandline
 conda activate sleap
