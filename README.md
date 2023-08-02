@@ -61,7 +61,7 @@ This launches a Google Chrome browser window. This app may be removed in the fut
 
 ### Mount S3 buckets
 
-If you would like to access certain S3 data buckets but they are not already mounted on the `C:\` disk, you may contact ...
+If you would like to access certain S3 data buckets but they are not already mounted on the `C:\` disk, you may contact the Neural Dynamics Scientific Computing team. 
 
 In case you would like to  mount additional S3 buckets on the file system by yourself, here is how you can do it.
 
