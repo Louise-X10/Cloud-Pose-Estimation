@@ -6,22 +6,30 @@ Repository for SciComp 2023 Summer Intern Project.
 
 ### Navigate File System
 
+You may navigate the file system via the command line in the terminal app, or via a File Explorer window which you can open by running `explorer` in the terminal app.
+
 The User home directory can be accessed via two routes, `C:\Users\PhotonUser` or `D:\PhotonUser`. 
 
-The test S3 bucket that is already mounted for you is available at `C:\s3-mount`, and it contains some sample videos for Sleap and DLC. After actual deployment, the common s3 data buckets will all be mounted under the `C:\` disk, but during the testing phase right now, only the test bucket is mounted. 
+The test S3 data bucket that is already mounted for you is available at `C:\s3-mount`, and it contains some sample videos for Sleap and DLC. After actual deployment, the common s3 data buckets will all be mounted under the `C:\` disk, but during the testing phase right now, only the test bucket is mounted. 
 
-To upload / download files between the cloud instance and your local computer, click on the files icon on the top left corner. It will open up a window showing two folders, `Home Folder` and `Temporary Folder`. These folders can also be found under `C:\Users\PhotonUser\My Files`. The `Home Folder` is connected to an S3 bucket unique to each user, so everything stored in this home folder persists over sessions, and is not shared between users. On the other hand, things stored in the Temporary folder may not persist over different instances (e.g. if you log off and then log in again, do not assume files in the Temporary folder still exists). 
+The Home Folder is a place to save files that are intended to last over different sessions. It is connected to an S3 bucket that is unique to each user, in other words the Home Folder is not shared between users. The Temporary Folder, on the other hand, stores files that will get cleaned up after you end the session, so you should not assume files in this folder to still exist after you log out and log back in. These folders can be found under `C:\Users\PhotonUser\My Files`, but you can also click on the files icon in the AppStream toolbar to access them. 
 
-![AppStream Icons at Upper Left Corner](appstream-icons.png)
+### How to Upload/Download files to Cloud
 
-### How to Copy/Paste to Cloud
+Click the files icon in the AppStream toolbar to open up a window displaying the `Home Folder` and `Temporary Folder`. Drag and drop files to either folders, or use the `Upload files` button on the top right corner to upload files to this cloud instance. You can only access these two particular folders through the files icon, but you may move the files to other locations via other means, such as File Explorer or the command line. However, beware that only the files in the Home Folder are guaranteed to be saved after you log out of the session. 
 
-When the browser prompts for clipboard permissions, click `Allow`. If copy and pasting still does not work, click the clipboard icon on the top left corner, and choose `Paste to remote session` or `Copy to local computer` as you desire, and follow the instructions. 
+If you would like to download files, move them to the Home Folder or the Temporary Folder (via the File Explorer or the command line), then click the files icon. Navigate to the file you want to download, and click the drop down button on the right end, and select download. Note that you are only able to download files but not folders in this window. If you would like to download a folder, first zip them (e.g. through File Explorer), move the zip file to Temporary folder (so it gets cleared when you log out), and download the zip file. 
+
+![AppStream Toolbar at Upper Left Corner](appstream-icons.png)
+
+### How to Copy/Paste Text to Cloud
+
+When you first log in to AppStream and the browser prompts for clipboard permissions, click `Allow`, then copy and paste should work as usual. If they still does not work, click the clipboard icon in the AppStream toolbar, and choose `Paste to remote session` or `Copy to local computer` as you desire, and follow the instructions. 
 
 
 ### Sleap GUI
 
-Open the Anaconda Prompt app, and enter the following in the command line:
+After logging in, select the `Test-Sleap` catalog and choose the `Terminal (SLEAP GUI)` app, which launches the GUI automatically. Alternatively, choose the `Terminal (SLEAP)` app to open a terminal window, and enter the following command to launch the GUI:
 
 ```commandline
 sleap-label
@@ -31,36 +39,45 @@ Follow the GUI guidelines to proceed. More detailed guide through the Sleap GUI 
 
 ### DeepLabCut GUI
 
-Open the Anaconda Prompt app, and enter the following in the command line:
+After logging in, select the `Test-DeepLabCut` catalog and choose the `Terminal (DLC GUI)` app, which launches the GUI automatically. Alternatively, choose the `Terminal (DLC)` app to open a terminal window, and enter the following command to launch the GUI:
 
 ```commandline
 python -m deeplabcut
 ```
 
-Follow the GUI guidelines to create a project. The default location of new projects is the User Desktop `D:\PhotonUser/Desktop`. More detailed guide through the DLC GUI is available [here](https://deeplabcut.github.io/DeepLabCut/docs/PROJECT_GUI.html)
+Follow the GUI guidelines to create a project. The default location of new projects is the User Desktop `D:\PhotonUser/Desktop`, so remember to move your files to Home Folder before leaving. It is recomended to move the files before creating the training dataset so you can run training in Home Folder. You could also move the files before labeling the frames if you are worried about accidentally logging out during labeling. A tutorial of the DLC GUI is available in [this video](https://www.youtube.com/watch?v=KcXogR-p5Ak), and more details are available in [the DLC official webpage](https://deeplabcut.github.io/DeepLabCut/README.html)
 
-NOTE: To add videos, click the `Browse videos` button to open the file selector window. Select the **folder** containing the video files, and click `choose` to confirm. Now all video files in that container will be displayed in the GUI, only select the ones you will be analyzing. 
+NOTE: To add videos, click the `Browse videos` button to open the file selector window. Select the **folder** containing the video files, **NOT** the video file itself, then click `choose` to confirm. Now all video files in that container will be displayed in the GUI, only select the ones you will be analyzing. 
 
 ### Git Bash
 
-If you would like to use git operations, or if you are not familiar with the Windows terminal commands, you can also launch the Git Bash app. Remember to run `cd ~` first to get to the user home directory. However, Conda operations are only available in the Windows terminal app and not available on Git Bash. 
+If you are not familiar with the Windows terminal commands and would like to use Linux commands (e.g. `ls` instead of `dir` to list files in directory), or if you would like to use git operations, you can also launch the Git Bash app. Remember to run `cd ~` first to get to the user home directory. However, Conda environments are only available in the Windows terminal app, so you would not be able to run sleap or deeplabcut through a Git Bash window. 
+
+P.S. This would not be an issue after we switch to using Linux instead of Windows in the future. 
+
+### Chrome
+
+This launches a Google Chrome browser window. This app may be removed in the future. 
 
 ### Mount S3 buckets
 
-If you want to mount additional S3 buckets on the file system, you can do so in the foreground with the following command. This process will then occupy the current console. Minimize this console and open another console to run other commands. Terminate the process by typing [ctrl] + [C] in the original console, or by closing the original console to unmount the bucket. Here is an example of mounting the appstream test bucket to the MOUNT_PATH `C:\s3-mount`. 
+If you would like to access certain S3 data buckets but they are not already mounted on the `C:\` disk, you may contact ...
+
+In case you would like to  mount additional S3 buckets on the file system by yourself, here is how you can do it.
+
+The first option is to mount in the foreground with the following command. This mount process will then occupy the current console. Minimize this console and open another console to run other commands. Terminate the process by typing [ctrl] + [C] in the original console, or by closing the original console to unmount the bucket. Substitute MOUNT_PATH with the path to a non-existing folder name (i.e. you do not need to create the folder beforehand), for example the mount path for the appstream test bucket is `C:\s3-mount`.
 
 ```commandline
 rclone mount s3:aind-appstream-data-dev-temporary MOUNT_PATH
 ```
 
-You can also mount them in the background with the first command. The console will close immediately and you can open a new console to continue with other commands. Run the second command to unmount all buckets. Here is an example of mounting the appstream test bucket to the MOUNT_PATH `C:\s3-mount`. 
+The second option is to mount in the background using the first command below. The console will close immediately and you can open a new console to continue with other commands. Run the second command to unmount all buckets (CAUTION).
 
 ```commandline
 rclone mount s3:aind-appstream-data-dev-temporary MOUNT_PATH --no-console
 
 taskkill /F /IM rclone.exe
 ```
-
 
 ## Developer Guideline
 
@@ -73,7 +90,7 @@ These notebooks have instructions on buiding different kinds of images for AppSt
 - `DLC-Windows-Report.ipynb`
 - `Rclone-Sleap-Linux-Report.ipynb`
 
-The `Sleep-Demo.ipynb` notebook contains a simple demonstration of the Sleap Software on a local Windowd computer with no GPU support. `sample_data_analysis.h5` is the sample output from the demonstration. 
+The `Sleep-Demo.ipynb` notebook contains a simple demonstration of the Sleap Software on a local Windows computer with no GPU support. `sample_data_analysis.h5` is the sample output from the demonstration. 
 
 The `AppStream-WorkInProgress.ipynb` contains work that are still in progress or work that is already depracated. Attempts at AppStream that have been tried but failed are logged here. 
 
