@@ -10,7 +10,7 @@ You may navigate the file system via the command line in the terminal app, or vi
 
 The User home directory can be accessed via two routes, `C:\Users\PhotonUser` or `D:\PhotonUser`. 
 
-The test S3 data bucket that is already mounted for you is available at `C:\s3-mount`, and it contains some sample videos for Sleap and DLC. After actual deployment, the common s3 data buckets will all be mounted under the `C:\` disk, but during the testing phase right now, only the test bucket is mounted. 
+A test S3 data bucket is already mounted and available at `C:\s3-mount`, and it contains some sample videos for Sleap and DLC. This product is currently in the development phase, so only the test bucket is mounted. Once it is ready for deployment, common AIND s3 data buckets will be mounted under the `C:\` disk.
 
 The Home Folder is a place to save files that are intended to last over different sessions. It is connected to an S3 bucket that is unique to each user, in other words the Home Folder is not shared between users. The Temporary Folder, on the other hand, stores files that will get cleaned up after you end the session, so you should not assume files in this folder to still exist after you log out and log back in. These folders can be found under `C:\Users\PhotonUser\My Files`, but you can also click on the files icon in the AppStream toolbar to access them. 
 
@@ -24,7 +24,7 @@ If you would like to download files, move them to the Home Folder or the Tempora
 
 ### How to Copy/Paste Text to Cloud
 
-When you first log in to AppStream and the browser prompts for clipboard permissions, click `Allow`, then copy and paste should work as usual. If they still does not work, click the clipboard icon in the AppStream toolbar, and choose `Paste to remote session` or `Copy to local computer` as you desire, and follow the instructions. 
+When you first log in to AppStream and the browser prompts for clipboard permissions, click `Allow`If you did not click Allow, or you clicked Allow but copy and pasting still doesn’t work, use the clipboard icon in the AppStream toolbar. Choose `Paste to remote session` or `Copy to local computer` according to your needs and follow its instructions. 
 
 
 ### Sleap GUI
