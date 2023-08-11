@@ -1,9 +1,15 @@
 # AppStream Image Builder Guide 
 
+### Who is this for?
 
-Overview of AppStream structure? 
+You are trying to build a custom AppStream image with certain applications installed. 
 
-## Overview
+### Requirements
+
+Before going through these steps, you should have a basic idea of how AppStream functions. If you haven't already, checkout the [AppStream Developer Intro notebook](./AppStream-Developer-Intro.ipynb) for a brief overview of AppStream. 
+
+### Overview
+
 **Step 1**: Launch Image Builder from AWS Console 
 - Choose a base image 
     - AppStream provides some base images to start off, with two OS options: Windows and Amazon Linux 2 
@@ -13,7 +19,7 @@ Overview of AppStream structure?
 
 Windows Image Builder Users: 
 
-<img src="../readme-images/window-users.png" width=60%>
+<img src="../readme-images/window-users.png" width=80%>
 
 **Step 2**: Install Application as Admin 
 
