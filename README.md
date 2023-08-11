@@ -6,18 +6,18 @@ Repository for SciComp 2023 Summer Intern Project.
 
 - `docs`: guides and notebooks on AppStream, both for developers and for users
 - `poster`: a poster summarizing results of this project
-- `Sleap-Demo.ipynb`: a short demonstration of how to use SLEAP
+- `Sleap-Demo.ipynb`, `sample_analysis_data.h5`: a short demonstration of how to use SLEAP, and a sample results file
 - `Compare-Sleap.ipynb`, `sleap-mouse-topview`: a notebook on SLEAP training in AppStream (for comparison with DLC), and the files generated from this process
 - `Compare-DLC.ipynb`, `dlc-prelabeled-Pranav-2023-07-27`: a notebook on DLC training in AppStream (for comparison with SLEAP), and the files generated from this process
 
 
 ## Developer Guideline
 
-If you are not familiar with AppStream, `Appstream-Intro.ipynb` contains a brief overview of AppStream's basic terminology and covers some features of AppStream that has been explored during this project. 
+If you are not familiar with AppStream, checkout `AppStream-Developer-Intro.ipynb`, which contains a brief overview of AppStream's basic terminology and covers some features of AppStream that has been explored during this project. 
 
-These notebooks have instructions on buiding different kinds of images for AppStream. 
+The `AppStream-Image-Builder-Guide.ipynb` illustrates the general steps to building a custom image in AppStream. There are also several notebooks with specific instructions on buiding different kinds of images in AppStream. 
 
-- `Sleap-Windows-Report.ipynb`: Has the most detailed guide of image building process for Windows platform
+- `Sleap-Windows-Report.ipynb`: Has the most detailed run through each step of image building process on Windows platform
 - `Rclone-Windows-Report.ipynb`
 - `DLC-Windows-Report.ipynb`
 - `Rclone-Sleap-Linux-Report.ipynb`
@@ -28,8 +28,10 @@ The `AppStream-DepracatedWorks.ipynb` contains some documentation of the options
 
 ### Environment Installation
 
-Here are instructions to set up two separate virtual environments for running the jupyter notebook and SLEAP respectively. These instructions work on a Windows 10 machine. 
-If you are using a different machine, checkout more detailed instructions to install SLEAP [here](https://sleap.ai/develop/installation.html)
+Here are instructions to set up two separate virtual environments for running the jupyter notebook and SLEAP respectively on your local computer. These instructions work on a Windows 10 machine. 
+If you are using a different machine, checkout more detailed instructions to install SLEAP [here](https://sleap.ai/develop/installation.html). 
+
+If you would like to install DeepLabCut on your local computer, please check out their [installation guide](https://github.com/DeepLabCut/DeepLabCut/blob/main/docs/installation.md). Alternatively, you could also checkout the instructions of [installing DLC in AppStream](./docs/Windows-DLC-Image.ipynb), which should be similar to how you would install DLC on a local Windows computer. 
 
 1. Install via Shell script
 
