@@ -1,22 +1,22 @@
 
 # AppStream User Guide for Animal Pose Estimation
 
-**Who is this for?**
+### Who is this for?
 
 You are trying to analyze imaging data hosted on Allen Institute for Neural Dynamics cloud buckets. 
 
-**Requirements** 
+### Requirements
 
 Before going through these steps, you need to have an AppStream account which has access to the SLEAP stack and/or the DeepLabCut stack. If you don’t have an account, you may request one from the Allen Institute Neural Dynamics Scientific Computing team. 
 
-**Overview** 
+### Overview
 
 This guide explains how to use AWS AppStream to run SLEAP and/or DeepLabCut to analyze data stored in S3. 
 
-Step 1: Log in to AppStream account
+**Step 1**: Log in to AppStream account
 
 
-Step 2: Launch the desired application
+**Step 2**: Launch the desired application
     
 Choose a catalog and select the "Terminal (GUI)" app to launch the Pose Estimation GUI
 
@@ -26,18 +26,18 @@ Alternatively, after entering the AppStream instance, you can click the “Launc
 
 <img src="../readme-images/appstream-icons.png" width=35%> <img src="../readme-images/dlc-apps-dropdown.png" width=20%>
 
-Step 3: (Optional) Upload files to AppStream 
+**Step 3**: (Optional) Upload files to AppStream 
 
 - Click the My Files icon from the AppStream toolbar to open a window displaying the Home Folder and Temporary Folder. 
 - Drag and drop files from local computer to either folder. Or use the Upload files button on the top right corner to upload files.   
 
 Note that you can only upload files to the Home Folder or the Temporary Folder before moving them elsewhere. 
 
-Step 4: Load data from S3 bucket
+**Step 4**: Load data from S3 bucket
 
 Follow instructions in the GUI to import video data. A test S3 data bucket is already mounted and available at `C:\s3-mount`, and it contains some sample videos for Sleap and DLC. This product is currently in the development phase, so only the test bucket is mounted. Once it is ready for deployment, common AIND s3 data buckets will be mounted under the `C:\` disk.
 
-Step 5: Annotate Data and Save Results in Home Bucket
+**Step 5**: Annotate Data and Save Results in Home Bucket
 
 Perform analysis according to documentation and tutorials for SLEAP and DeepLabCut.  
 
@@ -49,7 +49,7 @@ Save any important results in the Home Folder and any temporary files in the Tem
 
 You can either use the command line in Terminal to move files to the desired location, or you can run `explorer` command in the Terminal app to open a File Explorer window.  
 
-Step 6: (Optional) Download results to local computer 
+**Step 6**: (Optional) Download results to local computer 
 
 - Move any files you want to download to the Temporary Folder.  
 - Click the My Files icon from the AppStream toolbar to open a window displaying the Home Folder and Temporary Folder.  
@@ -72,7 +72,7 @@ When you first log in to AppStream and the browser prompts for clipboard permiss
 
 Contact the Scientific Computing team to mount the data for you (or [mount it yourself](#mount-s3-buckets)).
 
-## Overview of applications in AppStream
+## Overview of applications installed in AppStream
 
 #### Sleap GUI
 
