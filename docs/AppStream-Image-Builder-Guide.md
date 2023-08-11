@@ -1,8 +1,12 @@
 # AppStream Image Builder Guide 
 
+
+Overview of AppStream structure? 
+
+## Overview
 **Step 1**: Launch Image Builder from AWS Console 
 - Choose a base image 
-    - AppStream provides some base images to start off, with two os options: Windows and Amazon Linux 2 
+    - AppStream provides some base images to start off, with two OS options: Windows and Amazon Linux 2 
     - You may also start from images created by others where certain apps are already installed, such as Demo_Windows_Rclone for Windows or Demo_Conda for Linux 
 - (Optional) Attach IAM role: If you would like to have access to other AWS services (like S3), attach an IAM role with the corresponding permissions. Then within the image builder, you can access those services with the profile name “appstream-machine-role" 
 - Enable default network configuration 
@@ -39,7 +43,7 @@ As a result of this step, users who launch instances from the resulting image wo
 
 - If Windows, switch back to Admin User. If Linux, exit the Template User (and delete it). 
 - In Windows Images, just click the “save settings” button in the Image Assistant app after switching back to an Admin, so that all configurations that were setup in Template User will be saved (and copied to Test user). 
-- In Linux Images, follow instructions in [notebook]().  
+- In Linux Images, follow instructions in [The Linux notebook](./Linux-Conda-Sleap-Rclone-Image.ipynb).  
 
 **Step 6**: (Optional) Test Apps 
 

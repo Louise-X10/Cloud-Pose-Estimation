@@ -4,7 +4,12 @@ Repository for SciComp 2023 Summer Intern Project.
 
 ## Repo Overview
 
-- `docs`: guides and notebooks on AppStream
+- `docs`: guides and notebooks on AppStream, both for developers and for users
+- `poster`: a poster summarizing results of this project
+- `Sleap-Demo.ipynb`: a short demonstration of how to use SLEAP
+- `Compare-Sleap.ipynb`, `sleap-mouse-topview`: a notebook on SLEAP training in AppStream (for comparison with DLC), and the files generated from this process
+- `Compare-DLC.ipynb`, `dlc-prelabeled-Pranav-2023-07-27`: a notebook on DLC training in AppStream (for comparison with SLEAP), and the files generated from this process
+
 
 ## Developer Guideline
 

@@ -1,0 +1,8 @@
+inference: []
+training:
+- cfg: centroid.json
+  run_path: models/appstream-sleap-dlclabels-epoch200-230728_002222.centroid
+  train_labels: labels.fromdlc.train.pkg.pkg.slp
+- cfg: centered_instance.json
+  run_path: models/appstream-sleap-dlclabels-epoch200-230728_002222.centered_instance
+  train_labels: labels.fromdlc.train.pkg.pkg.slp
