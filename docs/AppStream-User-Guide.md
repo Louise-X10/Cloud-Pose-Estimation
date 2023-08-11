@@ -20,11 +20,11 @@ Step 2: Launch the desired application
     
 Choose a catalog and select the "Terminal (GUI)" app to launch the Pose Estimation GUI
 
-<img src="readme-images/catalog-view.png" width=45%> <img src="readme-images/dlc-app-view.png" width=40%>
+<img src="../readme-images/catalog-view.png" width=45%> <img src="../readme-images/dlc-app-view.png" width=40%>
 
 Alternatively, after entering the AppStream instance, you can click the “Launch apps” icon on the upper left toolbar (left figure) to list all the apps available (right figure) and select the app you want to launch. 
 
-<img src="readme-images/appstream-icons.png" width=35%> <img src="readme-images/dlc-apps-dropdown.png" width=20%>
+<img src="../readme-images/appstream-icons.png" width=35%> <img src="../readme-images/dlc-apps-dropdown.png" width=20%>
 
 Step 3: (Optional) Upload files to AppStream 
 
