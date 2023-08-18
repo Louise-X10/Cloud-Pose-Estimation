@@ -1,0 +1,8 @@
+inference: []
+training:
+- cfg: centroid.json
+  run_path: models/appstream_noinference_train16_test4230721_210307.centroid
+  train_labels: labels.20frames16labeled.pkg.slp
+- cfg: centered_instance.json
+  run_path: models/appstream_noinference_train16_test4230721_210307.centered_instance
+  train_labels: labels.20frames16labeled.pkg.slp
