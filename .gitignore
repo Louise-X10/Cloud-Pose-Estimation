@@ -162,7 +162,14 @@ cython_debug/
 # Sleap Demo
 .idea/
 *.mp4
-sleap-demo/
-appstream-demo/
-terraform-demo/
-poster-demo/
+*.avi
+Worklog.ipynb
+
+# Sleap files
+sleap-demo-files/
+*.pkg.slp
+sleap-mouse-topview/*/*/*/best_model.h5
+
+# DLC files except evaluation results
+dlc-*/*
+!dlc-*/evaluation-results

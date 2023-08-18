@@ -1,0 +1,5 @@
+inference: []
+training:
+- cfg: single_instance.json
+  run_path: models/appstream-dlc-labels-single-baseline230731_225111.single_instance
+  train_labels: labels.fromdlc.train.pkg.slp
